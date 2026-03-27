@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presence</title>
    <style>
+
+       /* 1. Define the 3-digit style */
+@counter-style triple-digit {
+    system: numeric;
+    symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+    pad: 3 "0"; /* This "3" makes it 001. Use "4" for 0001 */
+}
+
+/* 2. Apply it to your list */
+ol {
+    list-style-type: triple-digit;
+    padding-left: 40px;
+    color: #999;
+}
     body {
         /* This is the secret "System Font" stack */
         font-family: Helvetica;
