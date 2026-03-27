@@ -3,80 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presence</title>
-   <style>
+    <title>presence.</title>
+    
+    <!-- This links the actual LaTeX (Computer Modern) font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css">
 
-       /* 1. Define the 3-digit style */
-@counter-style triple-digit {
-    system: numeric;
-    symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-    pad: 3 "0"; /* This "3" makes it 001. Use "4" for 0001 */
-}
+    <style>
+        /* 1. Define the 001, 002 numbering style */
+        @counter-style triple-digit {
+            system: numeric;
+            symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+            pad: 3 "0";
+            suffix: "  "; /* This removes the period after the number */
+        }
 
-/* 2. Apply it to your list */
-ol {
-    list-style-type: triple-digit;
-    padding-left: 40px;
-    color: #999;
-}
-    body {
-        /* This is the secret "System Font" stack */
-        font-family: Helvetica;
-        background-color: #ffffff;
-        color: #ff0000;
-        padding: 60px 40px; /* More whitespace like his site */
-        max-width: 650px;
-        line-height: 1.5;
-        -webkit-font-smoothing: antialiased; /* Makes fonts look sharper */
-    }
+        body {
+            /* 2. Apply Computer Modern Serif */
+            font-family: "Computer Modern Serif", serif;
+            background-color: #ffffff;
+            color: #000000;
+            
+            /* 3. The "Small & Crisp" aesthetic */
+            font-size: 14px; 
+            line-height: 1.8;
+            padding: 80px 50px;
+            max-width: 700px;
+            margin: 0 auto; /* Centers the content block */
+            
+            /* Text sharpening for modern screens */
+            -webkit-font-smoothing: antialiased;
+        }
 
-    h1 {
-        font-size: 10px; /* He uses a small, subtle header */
-        font-weight: 500;
-        margin-bottom: 40px;
-        letter-spacing: -0.01em;
-    }
+        h1 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-transform: lowercase;
+        }
 
-    ol {
-        list-style-type: decimal-leading-zero;
-        padding-left: 0; /* Align numbers to the left margin */
-        list-style-position: inside; 
-        color: #999; /* Grey numbers */
-    }
+        ol {
+            list-style-type: triple-digit;
+            padding-left: 0;
+            margin-left: 0;
+            color: #999; /* Numbers are grey */
+        }
 
-    li {
-        margin-bottom: 12px;
-        font-size: 16px;
-    }
+        li {
+            margin-bottom: 8px;
+        }
 
-    /* This part makes the text black while keeping the numbers grey */
-    li a {
-        color: #000;
-        text-decoration: none;
-        margin-left: 10px;
-        border-bottom: 1px solid #eee;
-    }
+        /* 4. The link style: Black text, very subtle underline */
+        a {
+            color: #000000;
+            text-decoration: none;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 1px;
+            transition: border-color 0.2s;
+        }
 
-    li a:hover {
-        border-bottom: 1px solid #000;
-    }
+        a:hover {
+            border-bottom: 1px solid #000000;
+        }
 
-    /* If you want that serif "Blog" look for certain text, use this class */
-    .serif {
-        font-family: Helvetica;
-        font-style: italic;
-    }
-</style>
+        /* Responsive tweak for mobile phones */
+        @media (max-width: 600px) {
+            body {
+                padding: 40px 25px;
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <h1>presence</h1>
+    <h1>presence.</h1>
 
     <ol>
-        <li><a href="#">blog: photographs and essays</a></li>
+        <li><a href="https://naveen.blog">blog: photographs and essays</a></li>
         <li><a href="#">@yourname on twitter</a></li>
-        <li><a href="https://www.instagram.com/regltucker/">@regltucker</a></lihttps://www.instagram.com/regltucker/>
+        <li><a href="#">@yourname on instagram</a></li>
         <li><a href="#">email me</a></li>
+        <li><a href="#">a link to a project</a></li>
+        <li><a href="#">another interesting thing</a></li>
     </ol>
 
 </body>
