@@ -4,38 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presence</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #ffffff;
-            color: #000000;
-            padding: 50px;
-            max-width: 600px;
-            line-height: 1.8;
-        }
-        h1 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-        }
-        ol {
-            list-style-type: decimal-leading-zero;
-            padding-left: 2rem;
-            color: #999; /* This makes the numbers grey like his site */
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 2px;
-        }
-        a:hover {
-            border-bottom: 1px solid #000;
-        }
-    </style>
+   <style>
+    body {
+        /* This is the secret "System Font" stack */
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 60px 40px; /* More whitespace like his site */
+        max-width: 650px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased; /* Makes fonts look sharper */
+    }
+
+    h1 {
+        font-size: 16px; /* He uses a small, subtle header */
+        font-weight: 500;
+        margin-bottom: 40px;
+        letter-spacing: -0.01em;
+    }
+
+    ol {
+        list-style-type: decimal-leading-zero;
+        padding-left: 0; /* Align numbers to the left margin */
+        list-style-position: inside; 
+        color: #999; /* Grey numbers */
+    }
+
+    li {
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    /* This part makes the text black while keeping the numbers grey */
+    li a {
+        color: #000;
+        text-decoration: none;
+        margin-left: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    li a:hover {
+        border-bottom: 1px solid #000;
+    }
+
+    /* If you want that serif "Blog" look for certain text, use this class */
+    .serif {
+        font-family: Georgia, "Times New Roman", serif;
+        font-style: italic;
+    }
+</style>
 </head>
 <body>
 
